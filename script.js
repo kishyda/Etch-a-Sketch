@@ -4,6 +4,7 @@ const rows = document.querySelectorAll(".row");
 const elementToResize = document.getElementById('#body');
 const mySlider = document.querySelector(".mySlider");
 const sliderValue = document.querySelector(".sliderValue");
+const deleteButton = document.querySelector("#delete");
 let mousedown = false;
 
 function resizeToWindow() {
@@ -27,7 +28,9 @@ for(let i = 0; i < Number; i++){
 }
 
 function deletePad() {
-    rows.remove();
+    while(container.firstChild){
+        container.removeChild(container.firstChild);
+    }
 }
 
 container.addEventListener("mousedown", function(e) {
@@ -48,7 +51,21 @@ document.addEventListener("mouseup", function(e) {
 });
 
 mySlider.addEventListener("input", function(e){
-    sliderValue.textContent = mySlider.value;
-    createPad(mySlider.value);
+    deletePad();
+    let value = mySlider.value;
+    sliderValue.textContent = "[ " + value + " x " + value + " ]";
+    createPad(value);
 })
 
+
+button.addEventListener("click", function(e) {
+    createPad(value);
+})
+
+deleteButton.addEventListener("click", function(e) {
+    deletePad();
+})
+
+document.addEventListener("DOMContentLoaded", function(e) {
+    createPad(64);
+})
