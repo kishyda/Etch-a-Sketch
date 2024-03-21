@@ -12,7 +12,9 @@ function resizeToWindow() {
     elementToResize.style.width = newWidth + 'px';
     elementToResize.style.height = newHeight + 'px';
 }
-function createRow(Number) {
+
+function createPad(Number) {
+for(let i = 0; i < Number; i++){
     let div = document.createElement('div');
     div.classList.add('row');
     container.appendChild(div);
@@ -22,10 +24,6 @@ function createRow(Number) {
         div.appendChild(box);
     }
 }
-function createPad(Number) {
-for(let i = 0; i < Number; i++){
-    createRow(Number);
-    }
 }
 
 function deletePad() {
