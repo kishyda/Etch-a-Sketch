@@ -7,17 +7,21 @@
     </head>
     <body id="body">
         <h>Etch-a-Sketch</h>
-        <div class="userinputContainer">
-            <div class="sliderContainer">
-                <span>0</span>
-                <div class="sliderContainer2">
-                    <div class = "sliderValue">[64 x 64]</div>
-                    <input type ="range" min="0" max="128" value="64" step="1" class="mySlider">
+        <div class="biggerContainer">
+            <div class="userinputContainer">
+                <div class="sliderContainer">
+                    <span>0</span>
+                    <div class="sliderContainer2">
+                        <div class = "sliderValue">[32 x 32]</div>
+                        <input type ="range" min="0" max="64" value="32" step="1" class="mySlider">
+                    </div>
+                    <span>64</span>
                 </div>
-                <span>128</span>
             </div>
+            <div id="container"></div>
+            <div id="Footer">Copyright Git: @kishyda </div>
         </div>
-        <div id="container"></div>
+        
         <script>
             document.addEventListener("DOMContentLoaded", function(e) {
                 createPad(64);

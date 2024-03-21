@@ -2,19 +2,21 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #28231d;
 }
 
 h {
     font-size: 128px;
     justify-content: center;
     align-items: center;
+    color: #dfdce3
 }
 #container {
     display: flex;
     flex-direction: column;
-    height: 1024px;
-    width: 1024px;
-    background-color: aliceblue;
+    height: 768px;
+    width: 768px;
+    background-color: #dfdce3;
     margin-left: 10px;
     margin-right: 10px;
     border: 2px solid gray;
@@ -64,4 +66,12 @@ span {
 
 .userinputContainer { 
     padding: 16px;
+}
+
+.biggerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #a9a9a9;
+    padding: 50px;
 }
