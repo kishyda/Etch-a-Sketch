@@ -9,7 +9,12 @@ h {
     font-size: 128px;
     justify-content: center;
     align-items: center;
-    color: #dfdce3
+    color: #dfdce3;
+    border-radius: 25px;
+    background-color:#565656;
+    margin: 50px;
+    padding-left: 85px;
+    padding-right: 85px;
 }
 #container {
     display: flex;
@@ -20,6 +25,7 @@ h {
     margin-left: 10px;
     margin-right: 10px;
     border: 2px solid gray;
+    border-radius: 10px;
 }
 
 .row {
@@ -62,6 +68,8 @@ h {
 span {
     margin-top: auto;
     padding: 5px;
+    border-radius: 5px ;
+    background-color: #dfdce3;
 }
 
 .userinputContainer { 
@@ -74,4 +82,10 @@ span {
     align-items: center;
     background-color: #a9a9a9;
     padding: 50px;
+    border-radius: 25px;
+    justify-content: space-evenly;
+}
+
+#Footer {
+    margin-top: 20px;
 }
