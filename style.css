@@ -11,11 +11,12 @@ h {
     align-items: center;
     color: #dfdce3;
     border-radius: 25px;
-    background-color:#565656;
+    background-color: #565656;
     margin: 50px;
     padding-left: 85px;
     padding-right: 85px;
 }
+
 #container {
     display: flex;
     flex-direction: column;
@@ -52,6 +53,7 @@ h {
 .mySlider {
     width: 500px;
 }
+
 .sliderContainer {
     display: flex;
     flex-direction: row;
@@ -68,11 +70,11 @@ h {
 span {
     margin-top: auto;
     padding: 5px;
-    border-radius: 5px ;
+    border-radius: 5px;
     background-color: #dfdce3;
 }
 
-.userinputContainer { 
+.userinputContainer {
     padding: 16px;
 }
 

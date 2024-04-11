@@ -15,42 +15,42 @@ function resizeToWindow() {
 }
 
 function createPad(Number) {
-for(let i = 0; i < Number; i++){
-    let div = document.createElement('div');
-    div.classList.add('row');
-    container.appendChild(div);
-    for(let i = 0; i < Number; i++){
-        let box = document.createElement('div');
-        box.classList.add('box');
-        div.appendChild(box);
+    for (let i = 0; i < Number; i++) {
+        let div = document.createElement('div');
+        div.classList.add('row');
+        container.appendChild(div);
+        for (let i = 0; i < Number; i++) {
+            let box = document.createElement('div');
+            box.classList.add('box');
+            div.appendChild(box);
+        }
     }
-}
 }
 
 function deletePad() {
-    while(container.firstChild){
+    while (container.firstChild) {
         container.removeChild(container.firstChild);
     }
 }
 
-container.addEventListener("mousedown", function(e) {
+container.addEventListener("mousedown", function (e) {
     mousedown = true;
-    container.addEventListener("mousemove", function(e) {
+    container.addEventListener("mousemove", function (e) {
         if (mousedown && e.target.classList.contains("box")) { // Check if mouse is down
             const hoveredElement = document.elementFromPoint(e.clientX, e.clientY); // Corrected typo (event.clienX -> e.clientX)
             if (hoveredElement) {
                 hoveredElement.style.backgroundColor = "black";
-                }
             }
-        });
+        }
+    });
 });
 
 // Add mouseup event listener to stop tracking when mouse button is released
-document.addEventListener("mouseup", function(e) {
+document.addEventListener("mouseup", function (e) {
     mousedown = false; // Reset mousedown flag
 });
 
-mySlider.addEventListener("input", function(e){
+mySlider.addEventListener("input", function (e) {
     deletePad();
     let value = mySlider.value;
     sliderValue.textContent = "[ " + value + " x " + value + " ]";
@@ -58,14 +58,14 @@ mySlider.addEventListener("input", function(e){
 })
 
 
-button.addEventListener("click", function(e) {
+button.addEventListener("click", function (e) {
     createPad(value);
 })
 
-deleteButton.addEventListener("click", function(e) {
+deleteButton.addEventListener("click", function (e) {
     deletePad();
 })
 
-document.addEventListener("DOMContentLoaded", function(e) {
+document.addEventListener("DOMContentLoaded", function (e) {
     createPad(64);
 })
